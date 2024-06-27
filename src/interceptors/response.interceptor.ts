@@ -3,9 +3,9 @@ import {
   NestInterceptor,
   ExecutionContext,
   CallHandler,
-} from '@nestjs/common';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+} from "@nestjs/common";
+import { Observable } from "rxjs";
+import { map } from "rxjs/operators";
 
 @Injectable()
 export class ResponseInterceptor implements NestInterceptor {
@@ -24,8 +24,8 @@ export class ResponseInterceptor implements NestInterceptor {
         const statusCode = response.statusCode || 200;
         return {
           statusCode: statusCode,
-          status: 'success',
-          message: 'success',
+          status: "success",
+          message: "success",
           data: data,
         };
       }),
